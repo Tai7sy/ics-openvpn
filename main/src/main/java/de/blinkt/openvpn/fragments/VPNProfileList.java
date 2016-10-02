@@ -224,7 +224,6 @@ public class VPNProfileList extends ListFragment implements OnClickListener, Vpn
     private void setListAdapter() {
         if (mArrayadapter == null) {
             mArrayadapter = new VPNArrayAdapter(getActivity(), R.layout.vpn_list_item, R.id.vpn_item_title);
-
         }
         Collection<VpnProfile> allvpn = getPM().getProfiles();
         TreeSet<VpnProfile> sortedset = new TreeSet<VpnProfile>(new VpnProfileNameComparator());
@@ -282,16 +281,12 @@ public class VPNProfileList extends ListFragment implements OnClickListener, Vpn
         boolean startOldFileDialog = true;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             startOldFileDialog = !startFilePicker();
-
         if (startOldFileDialog)
             startImportConfig();
-
         return true;
     }
-
     @TargetApi(Build.VERSION_CODES.KITKAT)
     private boolean startFilePicker() {
-
         Intent i = Utils.getFilePickerIntent(getActivity(), Utils.FileType.OVPN_CONFIG);
         if (i != null) {
             startActivityForResult(i, FILE_PICKER_RESULT_KITKAT);
@@ -299,7 +294,6 @@ public class VPNProfileList extends ListFragment implements OnClickListener, Vpn
         } else
             return false;
     }
-
     private void startImportConfig() {
         Intent intent = new Intent(getActivity(), FileSelect.class);
         intent.putExtra(FileSelect.NO_INLINE_SELECTION, true);

@@ -123,28 +123,20 @@
             tools:ignore="ExportedActivity">
             <intent-filter android:label="@string/import_config">
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data android:mimeType="application/x-openvpn-profile" />
             </intent-filter>
             <intent-filter android:label="@string/import_config">
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
                 <data android:mimeType="application/ovpn" />
             </intent-filter>
-            <intent-filter android:label="@string/import_config">
-
-                <!-- http://stackoverflow.com/questions/7f030832/associating-certain-file-extension-to-my-android-application/7102838#7102838 -->
+            <intent-filter android:label="@string/import_config"><!-- http://stackoverflow.com/questions/7f030832/associating-certain-file-extension-to-my-android-application/7102838#7102838 -->
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:mimeType="*/*" />
                 <data android:scheme="file" />
                 <data android:host="*" />
