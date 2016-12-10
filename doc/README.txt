@@ -18,6 +18,7 @@ Build instructions:
 - Install sdk
 - Install ndk (Latest version should work as long as you use gcc)
 - Make sure that ndk-build is in your build path.
+- ndk r12b would be ok, don't use r13b because of https://github.com/schwabe/ics-openvpn/issues/563
 
 Fetch the git submodules (the default urls for the submodules use ssh,
 setup your own github ssh key or change the url to http in .gitmodules):
